@@ -9,6 +9,12 @@
   "author": "Github Lovers",
   "license": "ISC",
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "7.0.1",
+    "@typescript-eslint/parser": "7.0.1",
+    "eslint-config-airbnb-typescript": "17.1.0",
     "typescript": "5.3.3"
+  },
+  "dependencies": {
+    "actions-toolkit": "6.0.1"
   }
 }
