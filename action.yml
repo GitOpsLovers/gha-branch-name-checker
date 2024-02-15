@@ -1,0 +1,24 @@
+name: Branch name checker
+description: Github action to check branch nomenclature based on configurable patterns.
+
+inputs:
+  branch_pattern:
+    description: 'Pattern that should follow the names of the branches'
+    required: true
+  comment_for_invalid_branch_name:
+    description: 'Comment that will be written if the branch name does not follow the branch pattern'
+    required: false
+  fail_if_invalid_branch_name:
+    description: 'If its true the the action will fail if the branch does not follow the branch pattern'
+    required: false
+  ignore_branch_pattern:
+    description: 'Pattern of the branches names where this action will be no executed'
+    required: false
+
+runs:
+  using: node20
+  main: 'dist/index.js'
+
+branding:
+  icon: user
+  color: green

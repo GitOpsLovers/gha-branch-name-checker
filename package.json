@@ -1,0 +1,14 @@
+{
+  "name": "@githublovers/gha-branch-name-checker",
+  "version": "1.0.0",
+  "description": "Github action to check branch nomenclature based on configurable patterns.",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "author": "Github Lovers",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "5.3.3"
+  }
+}
