@@ -1,4 +1,8 @@
-# 🌿🕵️‍♂️ Branch name checker
+<h1 style="text-align: center;">🌿🕵️‍♂️  Branch name checker</h1>
+
+<h3 style="text-align: center;">🔌 📦 ⚒️</h3>
+
+<br>
 
 This GitHub action is an automated workflow that you can set up in your repository to verify the nomenclature of branches in your projects. It can be useful to ensure that all branches created in your repository follow a specific naming standard, making it easier to organize and track work in your project.
 
@@ -48,3 +52,13 @@ In this example, the action is executed on each open or edit of a pull request. 
 ## 👥 Contribution
 
 If you wish to contribute to this action, feel free to do so! You can submit proposals for improvements, bug fixes or new features via pull requests.
+
+
+
+
+<hr>
+
+![Static Badge](https://img.shields.io/badge/PRs-welcome-orange) ![Static Badge](https://img.shields.io/badge/License-MIT-pink) ![Static Badge](https://img.shields.io/badge/release-2.0.0-blue) ![Static Badge](https://img.shields.io/badge/Node-20.11.1-green) ![Static Badge](https://img.shields.io/badge/NPM-10.2.4-red) ![GitHub Repo stars](https://img.shields.io/github/stars/GitOpsLovers/gha-branch-name-checker)
+
+ 
+
