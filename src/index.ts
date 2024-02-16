@@ -4,6 +4,8 @@ import writeComment from './application/write-comment.use-case';
 import parametersSchema from './domain/parameters.schema';
 
 Toolkit.run(
+
+  
   async (tools: Toolkit) => {
     tools.log.info('Validating parameters...');
 
