@@ -1,4 +1,5 @@
 import { Toolkit } from 'actions-toolkit';
+import deletePreviousComment from './application/delete-previous-comment.use-case';
 import validateParameters from './application/validate-parameters.use-case';
 import writeComment from './application/write-comment.use-case';
 import parametersSchema from './domain/parameters.schema';
@@ -39,6 +40,7 @@ Toolkit.run(
 
         tools.log.info('🚨 This branch has an invalid name');
 
+        await deletePreviousComment(tools, commentForInvalidBranchName);
         await writeComment(tools, commentForInvalidBranchName);
 
         if (failIfInvalidBranchName === 'true') {
