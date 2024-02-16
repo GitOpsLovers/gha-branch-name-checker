@@ -1,9 +1,30 @@
 {
-    "extends": [
-        "airbnb-base",
-        "airbnb-typescript/base"
-    ],
-    "parserOptions": {
-        "project": "./tsconfig.json"
-    }
+    "overrides": [
+        {
+            "files": ["*.ts", "*.js"],
+            "extends": [
+                "airbnb-base"
+            ]
+        },
+        {
+            "files": ["*.ts"],
+            "extends": [
+                "airbnb-typescript/base"
+            ],
+            "parserOptions": {
+                "project": "./tsconfig.json"
+            }
+        },
+        {
+            "files": ["*.js"],
+            "rules": {
+                "import/no-extraneous-dependencies": [
+                    "error", 
+                    {
+                        "devDependencies": true
+                    }
+                ]
+            }
+        }
+    ]
 }
