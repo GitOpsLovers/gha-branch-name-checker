@@ -33,7 +33,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Run Branch Naming Check
-        uses: Github-Lovers/gha-branch-name-checker@v1
+        uses: GitOpsLovers/gha-branch-name-checker@v2
         with:
           branch_pattern: 'feature|hotfix|chore'
           ignore_branch_pattern: 'internal'
