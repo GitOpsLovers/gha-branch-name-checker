@@ -4,7 +4,10 @@ import getParametersWithEmptyValues from './get-empty-params.use-case';
 import getParametersWithInvalidValues from './get.invalid-params.use-case';
 
 /**
+ * Validate action input parameters
  *
+ * @param tools Action's toolkit
+ * @param schema Parameters schema
  */
 export default function validateParameters(tools: Toolkit, schema: ParametersSchema): void {
   const parametersWithEmptyValues = getParametersWithEmptyValues(tools, schema);

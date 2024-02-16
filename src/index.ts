@@ -5,12 +5,12 @@ import parametersSchema from './domain/parameters.schema';
 
 Toolkit.run(
   async (tools: Toolkit) => {
-    tools.log.info('Validating parameters...');
+    tools.log.info('🔍 Validating parameters...');
 
     validateParameters(tools, parametersSchema);
 
     try {
-      tools.log.info('Running the action...');
+      tools.log.info('🚀 Running the action...');
 
       const branchPattern = tools.inputs.branch_pattern;
       const failIfInvalidBranchName = tools.inputs.fail_if_invalid_branch_name;
@@ -25,28 +25,30 @@ Toolkit.run(
           const isIgnoredBranch = new RegExp(ignoreBranchPattern).test(branchName);
 
           if (isIgnoredBranch) {
-            tools.log.info('This branch should be ignored');
+            tools.log.info('➡️ This branch should be ignored');
 
             return;
           }
         }
 
         if (isValidBranchName) {
-          tools.log.info('This branch has a valid name');
+          tools.log.info('✅ This branch has a valid name');
 
           return;
         }
 
-        tools.log.info('This branch has an invalid name');
+        tools.log.info('🚨 This branch has an invalid name');
 
         await writeComment(tools, commentForInvalidBranchName);
 
         if (failIfInvalidBranchName === 'true') {
           tools.exit.failure();
         }
+      } else {
+        tools.log.error('❌ Branch pattern is not defined');
       }
     } catch (error) {
-      tools.log.info('Unexpected error happened when action was running: ', error);
+      tools.log.error('❌ Unexpected error happened when action was running: ', error);
     }
   },
   {
