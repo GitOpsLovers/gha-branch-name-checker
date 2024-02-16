@@ -6,6 +6,8 @@ jobs:
   test-branch-name:
     runs-on: ubuntu-latest
     name: 🏃 Run the action
+    permissions:
+      pull-requests: write
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
