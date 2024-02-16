@@ -10,20 +10,12 @@ export default function validateParameters(tools: Toolkit, schema: ParametersSch
   const parametersWithEmptyValues = getParametersWithEmptyValues(tools, schema);
 
   if (parametersWithEmptyValues.length) {
-    tools.exit.failure(
-      `You forgot to provide some required values: [${parametersWithEmptyValues.join(
-        ', ',
-      )}]`,
-    );
+    tools.exit.failure(`🚨 You forgot to provide some required values: [${parametersWithEmptyValues.join(', ')}]`);
   }
 
   const parametersWithInvalidValues = getParametersWithInvalidValues(tools, schema);
 
   if (parametersWithInvalidValues.length) {
-    tools.exit.failure(
-      `Some parameters have invalid values: [${parametersWithInvalidValues.join(
-        ', ',
-      )}]`,
-    );
+    tools.exit.failure(`🚨 Some parameters have invalid values: [${parametersWithInvalidValues.join(', ')}]`);
   }
 }

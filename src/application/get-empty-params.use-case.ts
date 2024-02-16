@@ -13,16 +13,7 @@ export default function getParametersWithEmptyValues(
   tools: Toolkit,
   schema: ParametersSchema,
 ): string[] {
-  return Object.entries(schema).reduce<string[]>((acc, [parameter, parameterConfig]) => {
-    if (!parameterConfig.required) {
-      return acc;
-    }
-
-    if (tools.inputs[parameter]) {
-      return acc;
-    }
-
-    acc.push(parameter);
-    return acc;
-  }, []);
+  return Object.entries(schema)
+    .filter(([parameter, parameterConfig]) => parameterConfig.required && !Object.prototype.hasOwnProperty.call(tools.inputs, parameter))
+    .map(([parameter]) => parameter);
 }

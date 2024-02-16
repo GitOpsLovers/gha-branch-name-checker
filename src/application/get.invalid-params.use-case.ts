@@ -13,19 +13,12 @@ export default function getParametersWithInvalidValues(
   tools: Toolkit,
   schema: ParametersSchema,
 ): string[] {
-  return Object.entries(schema).reduce<string[]>((acc, [parameter, parameterConfig]) => {
-    if (!parameterConfig.availableValues) {
-      return acc;
-    }
+  return Object.entries(schema)
+    .filter(([parameter, parameterConfig]) => {
+      if (!parameterConfig.availableValues) return false;
+      if (!parameterConfig.required && !tools.inputs[parameter]) return false;
 
-    if (!parameterConfig.required && !tools.inputs[parameter]) {
-      return acc;
-    }
-
-    if (!parameterConfig.availableValues.includes(tools.inputs[parameter])) {
-      acc.push(parameter);
-    }
-
-    return acc;
-  }, []);
+      return !parameterConfig.availableValues.includes(tools.inputs[parameter]);
+    })
+    .map(([parameter]) => parameter);
 }
