@@ -10,6 +10,8 @@ Toolkit.run(
     validateParameters(tools, parametersSchema);
 
     try {
+
+      
       tools.log.info('Running the action...');
 
       const branchPattern = tools.inputs.branch_pattern;
