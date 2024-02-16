@@ -30,14 +30,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Run Branch Naming Check
-        uses: ./path/to/your/action
+        uses: Github-Lovers/gha-branch-name-checker@v1
         with:
           branch_pattern: 'feature|hotfix|chore'
           ignore_branch_pattern: 'internal'
-          comment_for_invalid_branch_name: 'El nombre de esta rama no sigue el estándar de nomenclatura.'
+          comment_for_invalid_branch_name: 'The name of the branch is invalid'
           fail_if_invalid_branch_name: 'true'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
