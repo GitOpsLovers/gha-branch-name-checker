@@ -20,5 +20,5 @@ runs:
   main: 'dist/index.cjs'
 
 branding:
-  icon: user
+  icon: git-branch
   color: green
