@@ -4,10 +4,11 @@ import esbuildPluginTsc from 'esbuild-plugin-tsc';
 function createBuildSettings() {
   return {
     entryPoints: ['src/index.ts'],
-    outfile: 'dist/index.js',
+    outfile: 'dist/index.cjs',
     bundle: true,
     minify: true,
     platform: 'node',
+    target: 'node20',
     plugins: [
       esbuildPluginTsc({
         force: true,

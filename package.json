@@ -1,24 +1,23 @@
 {
   "name": "@gitopslovers/gha-branch-name-checker",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Github action to check branch nomenclature based on configurable patterns.",
-  "main": "index.js",
+  "author": "Github Lovers",
+  "license": "MIT",
+  "type": "module",
   "scripts": {
     "dev": "tsc -w",
     "build": "node ./scripts/build.js"
   },
-  "author": "Github Lovers",
-  "license": "ISC",
-  "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "7.0.1",
-    "@typescript-eslint/parser": "7.0.1",
-    "esbuild": "0.20.0",
-    "esbuild-plugin-tsc": "0.4.0",
-    "eslint-config-airbnb-typescript": "17.1.0",
-    "typescript": "5.3.3"
-  },
   "dependencies": {
     "actions-toolkit": "6.0.1"
   },
-  "type": "module"
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "8.46.2",
+    "@typescript-eslint/parser": "8.46.2",
+    "esbuild": "0.25.11",
+    "esbuild-plugin-tsc": "0.5.0",
+    "eslint-config-airbnb-typescript": "18.0.0",
+    "typescript": "5.9.3"
+  }
 }
