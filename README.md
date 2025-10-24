@@ -23,7 +23,7 @@ You can configure this action using the following parameters:
 Here is an example of how to configure this action in your repository:
 
 ```yaml
-name: Nomenclatura de Ramas
+name: Branch name checker
 
 on:
   pull_request:
@@ -36,7 +36,7 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v4
 
-      - name: Run Branch Naming Check
+      - name: Run branch name check
         uses: GitOpsLovers/gha-branch-name-checker@v2
         with:
           branch_pattern: 'feature|hotfix|chore'
@@ -58,7 +58,7 @@ If you wish to contribute to this action, feel free to do so! You can submit pro
 
 <hr>
 
-![Static Badge](https://img.shields.io/badge/PRs-welcome-orange) ![Static Badge](https://img.shields.io/badge/License-MIT-pink) ![Static Badge](https://img.shields.io/badge/release-2.0.0-blue) ![Static Badge](https://img.shields.io/badge/Node-20.11.1-green) ![Static Badge](https://img.shields.io/badge/NPM-10.2.4-red) ![GitHub Repo stars](https://img.shields.io/github/stars/GitOpsLovers/gha-branch-name-checker)
+![Static Badge](https://img.shields.io/badge/PRs-welcome-orange) ![Static Badge](https://img.shields.io/badge/License-MIT-pink) ![Static Badge](https://img.shields.io/badge/release-3.0.0-blue) ![Static Badge](https://img.shields.io/badge/Node-20.11.0-green) ![Static Badge](https://img.shields.io/badge/NPM-10.2.4-red) ![GitHub Repo stars](https://img.shields.io/github/stars/GitOpsLovers/gha-branch-name-checker)
 
  
 
