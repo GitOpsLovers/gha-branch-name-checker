@@ -8,7 +8,7 @@ This GitHub action is an automated workflow that you can set up in your reposito
 
 ## ⚙️ Configuration
 
-You can configure this action using the following parameters:
+You can configure this actiossssn using the following parameters:
 
 - **branch_pattern**: The naming pattern that branches should follow. You must specify a regular expression that matches the names of the branches you want to allow. For example, `'feature|hotfix|chore'`.
   
