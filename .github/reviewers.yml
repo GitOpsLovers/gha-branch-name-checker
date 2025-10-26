@@ -1,0 +1,7 @@
+# Default reviewer config
+        version: 1
+        rules:
+        - pattern: "**/*.ts"
+            reviewers:
+            - "@your-org/your-team"
+    
