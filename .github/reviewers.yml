@@ -12,7 +12,7 @@ rules:
     description: "Changes to the repository reviewer settings."
     enabled: true
     when:
-      paths: [".github/reviewers.yml"]
+      paths: ["README.md", "src/domain/**/*.ts"]
     reviewers:
       users: [userOne, userTwo]
       required: 1
