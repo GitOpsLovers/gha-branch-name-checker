@@ -4,6 +4,7 @@
 
 <br>
 
+
 This GitHub action is an automated workflow that you can set up in your repository to verify the nomenclature of branches in your projects. It can be useful to ensure that all branches created in your repository follow a specific naming standard, making it easier to organize and track work in your project.
 
 ## ⚙️ Configuration
