@@ -1,7 +1,7 @@
 # Default Pull Reviewer configuration
 # You can see all the configuration options at httpss://github.com/reviewdog/reviewdog/blob/main/docs/configuration.md
 
-version: 1.0.0
+
 
 settings:
   enabled: true
