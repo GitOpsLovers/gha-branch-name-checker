@@ -14,5 +14,5 @@ rules:
     when:
       paths: ["README.md", "src/domain/**/*.ts"]
     reviewers:
-      users: [userOne, userTwo]
+      users: [aleeiix]
       required: 1
